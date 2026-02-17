@@ -1,0 +1,238 @@
+/* WikiMark — Markdown Stylesheet */
+/* Light + Dark mode support via prefers-color-scheme */
+
+:root {
+    --text-color: #24292f;
+    --bg-color: #ffffff;
+    --heading-color: #1b1f24;
+    --link-color: #0969da;
+    --link-hover-color: #0550ae;
+    --code-bg: #f6f8fa;
+    --code-text: #24292f;
+    --border-color: #d0d7de;
+    --blockquote-text: #57606a;
+    --blockquote-border: #d0d7de;
+    --table-border: #d0d7de;
+    --table-alt-bg: #f6f8fa;
+    --hr-color: #d8dee4;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: #e6edf3;
+        --bg-color: #0d1117;
+        --heading-color: #f0f6fc;
+        --link-color: #58a6ff;
+        --link-hover-color: #79c0ff;
+        --code-bg: #161b22;
+        --code-text: #e6edf3;
+        --border-color: #30363d;
+        --blockquote-text: #8b949e;
+        --blockquote-border: #30363d;
+        --table-border: #30363d;
+        --table-alt-bg: #161b22;
+        --hr-color: #21262d;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+html {
+    font-size: 17px;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+article {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 32px 20px 64px;
+}
+
+/* Headings */
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: 700;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid var(--border-color);
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 650;
+    padding-bottom: 0.25em;
+    border-bottom: 1px solid var(--border-color);
+}
+
+h3 {
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 1.1em;
+    font-weight: 575;
+}
+
+h5 {
+    font-size: 1em;
+    font-weight: 550;
+}
+
+h6 {
+    font-size: 0.9em;
+    font-weight: 525;
+    color: var(--blockquote-text);
+}
+
+/* Paragraphs */
+
+p {
+    margin: 0 0 1em;
+}
+
+/* Links */
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+/* Code */
+
+code {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: 0.88em;
+    background-color: var(--code-bg);
+    color: var(--code-text);
+    padding: 0.15em 0.35em;
+    border-radius: 4px;
+}
+
+pre {
+    background-color: var(--code-bg);
+    padding: 16px;
+    border-radius: 8px;
+    overflow-x: auto;
+    line-height: 1.5;
+    margin: 0 0 1em;
+}
+
+pre code {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    font-size: 0.88em;
+}
+
+/* Blockquotes */
+
+blockquote {
+    margin: 0 0 1em;
+    padding: 0.5em 1em;
+    border-left: 3px solid var(--blockquote-border);
+    color: var(--blockquote-text);
+    font-style: italic;
+}
+
+blockquote > :first-child {
+    margin-top: 0;
+}
+
+blockquote > :last-child {
+    margin-bottom: 0;
+}
+
+/* Lists */
+
+ul, ol {
+    margin: 0 0 1em;
+    padding-left: 2em;
+}
+
+li {
+    margin-bottom: 0.25em;
+}
+
+li > ul, li > ol {
+    margin-top: 0.25em;
+    margin-bottom: 0;
+}
+
+/* Tables */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 1em;
+}
+
+th, td {
+    padding: 8px 12px;
+    border: 1px solid var(--table-border);
+    text-align: left;
+}
+
+th {
+    font-weight: 600;
+    background-color: var(--code-bg);
+}
+
+tr:nth-child(even) {
+    background-color: var(--table-alt-bg);
+}
+
+/* Horizontal Rule */
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--hr-color);
+    margin: 2em 0;
+}
+
+/* Images */
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* Strong & Emphasis */
+
+strong {
+    font-weight: 600;
+}
+
+/* Task Lists */
+
+input[type="checkbox"] {
+    margin-right: 0.5em;
+}
