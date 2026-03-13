@@ -6,7 +6,7 @@ struct DocumentView: View {
     var body: some View {
         VStack(spacing: 0) {
             if viewModel.isEditing {
-                MarkdownEditorView(
+                RichMarkdownEditor(
                     text: $viewModel.documentContent,
                     onTextChange: {
                         viewModel.scheduleAutosave()

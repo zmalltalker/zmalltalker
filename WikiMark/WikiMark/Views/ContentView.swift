@@ -48,6 +48,36 @@ struct ContentView: View {
                     }
                 }
             }
+
+            // Formatting toolbar — visible only when editing
+            if viewModel.isEditing && viewModel.selectedFileURL != nil {
+                ToolbarItemGroup(placement: .secondaryAction) {
+                    Button(action: { NotificationCenter.default.post(name: .formatBold, object: nil) }) {
+                        Label("Bold", systemImage: "bold")
+                    }
+                    .help("Bold (Cmd+B)")
+
+                    Button(action: { NotificationCenter.default.post(name: .formatItalic, object: nil) }) {
+                        Label("Italic", systemImage: "italic")
+                    }
+                    .help("Italic (Cmd+I)")
+
+                    Button(action: { NotificationCenter.default.post(name: .formatCode, object: nil) }) {
+                        Label("Code", systemImage: "chevron.left.forwardslash.chevron.right")
+                    }
+                    .help("Inline Code (Cmd+J)")
+
+                    Button(action: { NotificationCenter.default.post(name: .formatHeading, object: nil) }) {
+                        Label("Heading", systemImage: "number")
+                    }
+                    .help("Cycle Heading Level (Cmd+Shift+H)")
+
+                    Button(action: { NotificationCenter.default.post(name: .formatStrikethrough, object: nil) }) {
+                        Label("Strikethrough", systemImage: "strikethrough")
+                    }
+                    .help("Strikethrough (Cmd+Shift+D)")
+                }
+            }
         }
         .sheet(isPresented: $showNewFileDialog) {
             NewItemSheet(title: "New File", placeholder: "Note name", isPresented: $showNewFileDialog) { name in

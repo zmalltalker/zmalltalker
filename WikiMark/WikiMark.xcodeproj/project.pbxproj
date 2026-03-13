@@ -23,6 +23,8 @@
 		A1000014000000000000000E /* markdown.css in Resources */ = {isa = PBXBuildFile; fileRef = A2000014000000000000000E /* markdown.css */; };
 		A1000015000000000000000F /* cmark in Frameworks */ = {isa = PBXBuildFile; productRef = A6000001000000000000000F /* cmark */; };
 		A1000016000000000000001A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2000017000000000000001A /* Assets.xcassets */; };
+		A1000017000000000000001B /* RichMarkdownEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000018000000000000001B /* RichMarkdownEditor.swift */; };
+		A1000018000000000000001C /* MarkdownHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000019000000000000001C /* MarkdownHighlighter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		A2000015000000000000000F /* WikiMark.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WikiMark.entitlements; sourceTree = "<group>"; };
 		A20000160000000000000010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2000017000000000000001A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A2000018000000000000001B /* RichMarkdownEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichMarkdownEditor.swift; sourceTree = "<group>"; };
+		A2000019000000000000001C /* MarkdownHighlighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownHighlighter.swift; sourceTree = "<group>"; };
 		A30000010000000000000001 /* WikiMark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WikiMark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -107,6 +111,7 @@
 				A20000060000000000000006 /* MarkdownViewerView.swift */,
 				A20000070000000000000007 /* CreateMissingFileSheet.swift */,
 				A20000080000000000000008 /* LinkSearchPanel.swift */,
+				A2000018000000000000001B /* RichMarkdownEditor.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -117,6 +122,7 @@
 				A2000011000000000000000B /* FileCoordinatorHelper.swift */,
 				A2000012000000000000000C /* ICloudContainerHelper.swift */,
 				A2000013000000000000000D /* MarkdownRenderer.swift */,
+				A2000019000000000000001C /* MarkdownHighlighter.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -227,6 +233,8 @@
 				A1000011000000000000000B /* FileCoordinatorHelper.swift in Sources */,
 				A1000012000000000000000C /* ICloudContainerHelper.swift in Sources */,
 				A1000013000000000000000D /* MarkdownRenderer.swift in Sources */,
+				A1000017000000000000001B /* RichMarkdownEditor.swift in Sources */,
+				A1000018000000000000001C /* MarkdownHighlighter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
